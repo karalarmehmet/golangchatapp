@@ -27,4 +27,4 @@ COPY --from=builder /app/golangchatapp .
 EXPOSE 8080
 
 # Command to run the application
-CMD ["./golangchatapp"]
+CMD ["./tmp/chat"]
