@@ -12,7 +12,7 @@ RUN go mod download
 COPY . .
 
 # Build the Go application
-RUN go build -o ./tmp/chat ./cmd/chat .
+RUN go build -o ./tmp/chat ./cmd/chat 
 
 # Stage 2: Run
 FROM alpine:latest
