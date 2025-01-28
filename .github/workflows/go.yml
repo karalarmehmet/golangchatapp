@@ -26,3 +26,13 @@ jobs:
 
     - name: Test
       run: go test -v ./...
+
+    - name:  Build and Push Docker Image  
+      uses:  docker/build-push-action@v6
+      with:  
+        image: mehmetkaralar/gochatapp
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        
+    
